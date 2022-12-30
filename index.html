@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="./loop_style.css">
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+</head>
+<header>
+  <nav>
+    <div class="title1">
+      <h2>loopstudios</h2>
+    </div>
+    <ul class="nav_links">
+      <li>About</li>
+      <li>Careers</li>
+      <li>Events</li>
+      <li>Products</li>
+      <li>Support</li>
+    </ul>
+    <div class="burger">
+      <div class="bars bar1"></div>
+      <div class="bars bar2"></div>
+      <div class="bars bar3"></div>
+    </div>
+  </nav>
+  <div class="title2">
+    <span>Immersive</span>
+    <span>experiences</span>
+    <span>that deliver</span>
+  </div>
+</header>
+
+<body>
+
+  <section class="first_sec">
+    <div class="cont_img"></div>
+    <div class="container">
+      <div>
+        <span>The leader in</span>
+        <span>interactive VR</span>
+      </div>
+      <p>Founded in 2011, Loopstudios has been producing world-class virtual reality 
+        projects for some of the best companies around the globe. Our award-winning 
+        creations have transformed businesses through digital experiences that bind 
+        to their brand.</p>
+    </div>
+  </section>
+
+  <div class="two">
+    <h3>Our creations</h3>
+    <button>See all</button>
+  </div>
+
+  <div class="grid_container">
+    <section class="three">
+      <div class="sections section1">
+        <div class="little_div">
+          <span>Deep</span>
+          <span>earth</span>
+        </div>
+        
+      </div>
+
+      <div class="sections section2">
+        <div class="little_div">
+          <span>Night</span>
+          <span>arcade</span>
+        </div>
+      </div>
+
+      <div class="sections section3">
+        <div class="little_div">
+          <span>Soccer</span>
+          <span>team VR</span>
+        </div>
+      </div>
+
+      <div class="sections section4">
+        <div class="little_div">
+          <span>The</span>
+          <span>grid</span>
+        </div>
+      </div>
+
+      <div class="sections section5">
+        <div class="little_div">
+          <span>From up</span>
+          <span>above VR</span>
+        </div>
+      </div>
+
+      <div class="sections section6">
+        <div class="little_div">
+          <span>Pocket</span>
+          <span>borealis</span>
+        </div>
+      </div>
+
+      <div class="sections section7">
+        <div class="little_div">
+          <span>The</span>
+          <span>curiosity</span>
+        </div>
+      </div>
+
+      <div class="sections section8">
+        <div class="little_div">
+          <span>Make it</span>
+          <span>fisheye</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="left">
+      <h4>loopstudios</h4>
+      <ul>
+        <li>About</li>
+        <li>Careers</li>
+        <li>Events</li>
+        <li>Products</li>
+        <li>Support</li>
+      </ul>
+    </div>
+    <div class="right">
+      <div class="imgs">
+        <img src="./images/icon-facebook.svg" alt="facebook">
+        <img src="./images/icon-twitter.svg" alt="twitter">
+        <img src="./images/icon-pinterest.svg" alt="pinterest">
+        <img src="./images/icon-instagram.svg" alt="instagram">
+      </div>
+      <p>© 2021 Loopstudios. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Billgate MEDEWOU</a>.
+  </div>
+  <script>
+    let burger =document.querySelector('.burger');
+    let ul = document.querySelector('.nav_links');
+    let nav = document.querySelector('nav');
+    let li = document.querySelectorAll('.nav_links li');
+
+    burger.addEventListener('click',()=>{
+      burger.classList.toggle('bg_active')
+      nav.classList.toggle('background');
+      ul.classList.toggle('nav_active')
+
+      li.forEach((e,index)=>{
+        if (e.style.animation){
+          e.style.animation=''
+        }
+        else{
+          e.style.animation=`appear 0.6s forwards ease-in ${index/6 -0.55}s`;
+        }
+      })
+    })
+  </script>
+</body>
+</html>
